@@ -18,3 +18,9 @@
 - git checkout v1.0 ： 切换到v1.0版本代码状态
 
 ## 涉及到与远程仓库协作的命令
+
+- ssh-keygen -t rsa : 指定 rsa 算法生成密钥，接着连续三个回车键（不需要输入密码），然后就会生成两个文件 id_rsa 和 id_rsa.pub ，而 id_rsa 是密钥，id_rsa.pub 就是公钥。win系统在 /c/Documents and Settings/username/.ssh 下，都是隐藏文件。把 id_rsa.pub 的内容添加到GitHub                       上，这样你本地的 id_rsa 密钥跟 GitHub上的 id_rsa.pub 公钥进行配对，授权成功才可以提交代码
+- ssh -T git@github.com ： 进行测试，是否添加成功
+- git push origin master ： 把本地代码推到远程 master 分支。
+- git pull origin master ： 把远程最新的代码更新到本地。一般我们在 push 之前都会先 pull ，这样不容易冲突。
+
